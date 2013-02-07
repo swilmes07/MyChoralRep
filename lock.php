@@ -16,7 +16,7 @@ $login_pass=$row['Pass'];
 
 if(!isset($user_check))
 {
-header("Location: index.php");
+header("Location: home.php");
 }
 
 ?>
