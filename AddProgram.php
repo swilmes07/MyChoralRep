@@ -36,7 +36,7 @@ include('lock.php');
 				</div>
 			</div>
 			<div id="content">
-			<form id='register' action='insert.php' method='post'
+			<form id='register' action='AddProgramInitial.php' method='post'
 			accept-charset='UTF-8'>
 			<fieldset >
 			<legend>Add Program </legend>
@@ -54,8 +54,8 @@ include('lock.php');
 				<label for='Arranger' ><b>Arranger:    </b></br></label>
 				<input type='text' name='Arranger' id='Arranger' maxlength='50' /></br>
 				<b>Translation Notes:</b></br>
-				<textarea name="Comments" id="Comments" rows="10" cols="60">Insert Translation Notes Here!</textarea><br />
-				<input type="submit" value="Submit" />
+				<textarea name="Comments" id="Comments" rows="10" cols="60" maxlength='300'>Insert Translation Notes Here!</textarea><br />
+				<input type="submit" name="nextsong" value="Add Another Song" /> <input type="submit" name="done" value="Finished" />
 
 			</fieldset>
 			</form>
