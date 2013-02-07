@@ -39,11 +39,11 @@ include('lock.php');
 			<form id='register' action='insert.php' method='post'
 			accept-charset='UTF-8'>
 			<fieldset >
-			<legend>Registration</legend>
-				<label for='ProgramName' >Program Name*:   &nbsp &nbsp &nbsp </label>
-				<input type='text' name='ProgramName' id='ProgramName' maxlength='30'/>
-				<label for='ProgramDate' >Program Date (mm/dd/yyy)*:   &nbsp &nbsp &nbsp </label>
-				<input type='text' name='ProgramDate' id='ProgramDate' maxlength='30'/>
+			<legend>Add Program </legend>
+				<label for='ProgramName' ><b>Program Name*:   </b></br></label>
+				<input type='text' name='ProgramName' id='ProgramName' maxlength='30'/></br>
+				<label for='ProgramDate' ><b>Program Date (mm/dd/yyyy)*:    </b></br></label>
+				<input type='text' name='ProgramDate' id='ProgramDate' maxlength='30'/></br>
 			</fieldset>
 			</form>
 
