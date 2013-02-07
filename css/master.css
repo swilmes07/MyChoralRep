@@ -73,7 +73,7 @@ h1{
 #sidebar-a {
 	margin-top: 8px;
 	float: right;
-	width: 280px;
+	width: 200px;
 	line-height: 18px;
 }
 #sidebar-a .padding {
@@ -81,7 +81,7 @@ h1{
 	
 }
 #content {
-	margin-right: 280px;
+	margin-right: 200px;
 	line-height: 18px;
 }
 #content .padding {
