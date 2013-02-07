@@ -42,8 +42,21 @@ include('lock.php');
 			<legend>Add Program </legend>
 				<label for='ProgramName' ><b>Program Name*:   </b></br></label>
 				<input type='text' name='ProgramName' id='ProgramName' maxlength='30'/></br>
-				<label for='ProgramDate' ><b>Program Date (mm/dd/yyyy)*:    </b></br></label>
-				<input type='text' name='ProgramDate' id='ProgramDate' maxlength='30'/></br>
+				<label for='ProgramDate' ><b>Program Date (yyyy-mm-dd)*:    </b></br></label>
+				<input type='text' name='ProgramDate' id='ProgramDate' maxlength='10'/></br>
+				</br>
+				</br>
+				</br>
+				<label for='SongName' ><b>Song Name*:    </b></br></label>
+				<input type='text' name='SongName' id='SongName' maxlength='50' /></br>
+				<label for='Composer' ><b>Composer*:    </b></br></label>
+				<input type='text' name='Composer' id='Composer' maxlength='50' /></br>
+				<label for='Arranger' ><b>Arranger:    </b></br></label>
+				<input type='text' name='Arranger' id='Arranger' maxlength='50' /></br>
+				<b>Translation Notes:</b></br>
+				<textarea name="Comments" id="Comments" rows="10" cols="60">Insert Translation Notes Here!</textarea><br />
+				<input type="submit" value="Submit" />
+
 			</fieldset>
 			</form>
 
