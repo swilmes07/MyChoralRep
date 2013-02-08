@@ -67,7 +67,7 @@ header("Location: home.php");
 				<label for='Arranger' ><b>Arranger:    </b></br></label>
 				<input type='text' name='Arranger' id='Arranger' maxlength='50' /></br>
 				<b>Translation Notes:</b></br>
-				<textarea name="Comments" id="Comments" rows="10" cols="60" maxlength='300'>Insert Translation Notes Here!</textarea><br />
+				<textarea name="Comments" id="Comments" rows="10" cols="60" maxlength='300'>No Translation Notes Added</textarea><br />
 				<input type="submit" name="nextsong" value="Add Another Song" /> <input type="submit" name="done" value="Finished" />
 
 			</fieldset>
