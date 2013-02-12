@@ -4,7 +4,12 @@
 $this->pageTitle=Yii::app()->name;
 ?>
 
-<h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
+<h1>Welcome to <strong>MyChoralRep!</strong></h1>
+
+		<p><strong>MyChoralRep</strong> is a website that will bring choral directors from all different regions together to share program information, view trends, and 
+		connect with one another. Please feel free to browse the site freely, or search based on one of our multiple criteria. Thanks for looking!</p>
+		<p>We are currently undergoing a 'face lift', so if you have any questions or would like more information about the services we provide please feel free to contact us.</p>
+	     
 
 <p>Congratulations! You have successfully created your Yii application.</p>
 
