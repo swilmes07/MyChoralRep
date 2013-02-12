@@ -1,5 +1,11 @@
 <?php
 include('lock.php');
+	$sql = mysql_query("SELECT * FROM programs WHERE ID=1");
+	while($row = mysql_fetch_array($sql, MYSQL_ASSOC))
+	{
+		$programs[] = $row;
+	}
+
 ?>
 	 <meta name="author" content="HIR DESIGNS" />
 	     
@@ -36,9 +42,16 @@ include('lock.php');
 				</div>
 			</div>
 			<div id="content">
-			
-			
-			</div
+				<ul>
+					<?php foreach($programs as $program): ?>					
+						<li>
+						Program Title: <a href="program-view.php?id=<?php print $program['Program_ID'];?>"> <?php print $program['Program_Name'];?></a> <br />
+						Program Date: <?php print $program['Program_Date'];?>
+						
+						</li>
+					<?php endforeach; ?>
+				</ul>
+			</div>
 			<div id="footer">
 					<div id="altnav">
 						<a href="#">About</a> -
