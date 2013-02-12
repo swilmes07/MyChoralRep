@@ -17,6 +17,7 @@ body
 
 #header
 {
+	
 	margin: 0;
 	padding: 0;
 	border-top: 3px solid #C9E0ED;
@@ -43,7 +44,9 @@ body
 
 #logo
 {
-	padding: 10px 20px;
+	margin-right: auto;
+	margin-left:auto;
+	width:750px;
 	font-size: 200%;
 }
 

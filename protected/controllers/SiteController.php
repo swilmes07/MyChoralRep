@@ -32,6 +32,13 @@ class SiteController extends Controller
 		$this->render('index');
 	}
 
+	public function actionStuff()
+	{
+		// renders the view file 'protected/views/site/index.php'
+		// using the default layout 'protected/views/layouts/main.php'
+		$this->render('tacos');
+	}
+	
 	/**
 	 * This is the action to handle external exceptions.
 	 */
@@ -105,5 +112,31 @@ class SiteController extends Controller
 	{
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
+	}
+	
+	public function actionRegister()
+	{
+		$model=new Members;
+
+		// enable ajax-based validation
+		
+		if(isset($_POST['ajax']) && $_POST['ajax']==='members-register-form')
+		{
+			echo CActiveForm::validate($model);
+			Yii::app()->end();
+		}
+		
+
+		if(isset($_POST['Members']))
+		{
+			$model->attributes=$_POST['Members'];
+			if($model->validate())
+			{
+				if($model->save()){
+					$this->redirect(Yii::app()->homeUrl);
+				}
+			}
+		}
+		$this->render('register',array('model'=>$model));
 	}
 }
