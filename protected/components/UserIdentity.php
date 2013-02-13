@@ -17,11 +17,26 @@ class UserIdentity extends CUserIdentity
 	 */
 	public function authenticate()
 	{
-		$users=array(
-			// username => password
-			'demo'=>'demo',
-			'admin'=>'admin',
-		);
+		include('config.php');		
+		<!-- TODO: Find out how to pull users with ajax. This method is bad, it is open to sql injection -->
+		$ses_sql=mysql_query("SELECT * FROM members WHERE UserID='".$this->username."' ");
+
+		$row=mysql_fetch_array($ses_sql);
+		$login_session=$row['UserID'];
+		$login_pass=$row['Pass'];
+		
+		$users=array();
+		
+		if($this->password == $login_pass){
+			$users=array( $login_session=>$login_pass );
+		} else{
+			$users=array(
+				// username => password
+				'demo'=>'demo',
+				'admin'=>'admin',
+			);
+		}
+		
 		if(!isset($users[$this->username]))
 			$this->errorCode=self::ERROR_USERNAME_INVALID;
 		elseif($users[$this->username]!==$this->password)
