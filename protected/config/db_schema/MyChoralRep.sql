@@ -20,8 +20,10 @@ CREATE  TABLE IF NOT EXISTS `MyChoralRep`.`Users` (
   `Position` VARCHAR(45) NULL ,
   `TeachingLevel` VARCHAR(25) NULL ,
   `ImageUrl` VARCHAR(128) NULL ,
+  `Password` VARCHAR(45) NOT NULL ,
   PRIMARY KEY (`ID`) ,
-  UNIQUE INDEX `idUsers_UNIQUE` (`ID` ASC) )
+  UNIQUE INDEX `idUsers_UNIQUE` (`ID` ASC) ,
+  UNIQUE INDEX `Email_UNIQUE` (`Email` ASC) )
 ENGINE = InnoDB;
 
 
@@ -180,23 +182,6 @@ CREATE  TABLE IF NOT EXISTS `MyChoralRep`.`Accompaniment` (
 ENGINE = InnoDB;
 
 USE `MyChoralRep` ;
-
--- -----------------------------------------------------
--- Placeholder table for view `MyChoralRep`.`User_Programs_View`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `MyChoralRep`.`User_Programs_View` (`ID` INT, `ProgramName` INT, `ProgramDate` INT, `Users_ID` INT, `Notes` INT);
-
--- -----------------------------------------------------
--- View `MyChoralRep`.`User_Programs_View`
--- -----------------------------------------------------
-DROP VIEW IF EXISTS `MyChoralRep`.`User_Programs_View` ;
-DROP TABLE IF EXISTS `MyChoralRep`.`User_Programs_View`;
-USE `MyChoralRep`;
-CREATE  OR REPLACE VIEW `MyChoralRep`.`User_Programs_View` AS 
-SELECT * FROM Programs WHERE Users_ID IN (SELECT ID FROM Users)
-UNION
-SELECT * FROM Songs WHERE Songs.ID IN (SELECT Songs_ID FROM Programs_Songs WHERE Programs_ID IN (SELECT ID FROM Programs WHERE Users_ID IN (SELECT ID FROM Users)))
-;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
