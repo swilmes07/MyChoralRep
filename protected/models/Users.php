@@ -19,8 +19,6 @@
  */
 class Users extends CActiveRecord
 {
-	public $confirm_password='';
-
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -51,11 +49,6 @@ class Users extends CActiveRecord
 			array('LastName, FirstName, Email, SchoolEmployed, Position, Password', 'length', 'max'=>45),
 			array('TeachingLevel', 'length', 'max'=>25),
 			array('ImageUrl', 'length', 'max'=>128),
-			array('Email', 'email'),
-			array('Email','unique'),
-			array('LastName, FirstName', 'match', 'pattern'=>"/[0-9]+/", 'not'=>true),
-			array('confirm_password', 'compare', 'compareAttribute'=>'Password'),
-			array('confirm_password', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('ID, LastName, FirstName, Email, SchoolEmployed, Position, TeachingLevel, ImageUrl, Password', 'safe', 'on'=>'search'),
@@ -89,7 +82,6 @@ class Users extends CActiveRecord
 			'TeachingLevel' => 'Teaching Level',
 			'ImageUrl' => 'Image Url',
 			'Password' => 'Password',
-			'confirm_password' => 'Confirm Password',
 		);
 	}
 
@@ -110,14 +102,15 @@ class Users extends CActiveRecord
 		$criteria->compare('Email',$this->Email,true);
 		$criteria->compare('SchoolEmployed',$this->SchoolEmployed,true);
 		$criteria->compare('Position',$this->Position,true);
-		$criteria->compare('TeachingLevel',$this->TeachingLevel,true);		
+		$criteria->compare('TeachingLevel',$this->TeachingLevel,true);
+		$criteria->compare('ImageUrl',$this->ImageUrl,true);
+		$criteria->compare('Password',$this->Password,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
-
-	public function beforeSave() {
+		public function beforeSave() {
 
     	if(parent::beforeSave() && $this->isNewRecord) {
         	$this->Password = hashPassword($this->Password);
@@ -125,14 +118,15 @@ class Users extends CActiveRecord
     	return true;
 	}
 
-	/*public function validatePassword($password)
+	public function validatePassword($password)
     {
-        return crypt($password,$this->Password)===$this->Password;
+       // return crypt($password,$this->Password)===$this->Password;
+    	return $password===$this->Password;
     }
  
-    /*public function hashPassword($password)
+    public function hashPassword($password)
     {
-        return crypt($password, $this->generateSalt());
-    }*/
-
+        //return crypt($password, $this->generateSalt());
+        return $password;
+    }
 }

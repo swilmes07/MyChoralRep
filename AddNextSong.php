@@ -53,3 +53,4 @@ if ($_POST['nextsong']){
   die('Error: ' . mysql_error());
   }
   mysql_close($bd);
+?>

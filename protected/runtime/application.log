@@ -873,3 +873,621 @@ REQUEST_URI=/web/mychoralrep/index.php?r=site/login
 in C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php (46)
 in C:\wamp\www\web\MyChoralRep\protected\models\LoginForm.php (52)
 in C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php (101)
+2013/02/18 21:39:20 [error] [php] Trying to get property of non-object (C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php:31)
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#1 C:\wamp\www\web\yiisite\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php(101): LoginForm->validate()
+#3 C:\wamp\www\web\yiisite\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\wamp\www\web\yiisite\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\web\yiisite\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\wamp\www\web\yiisite\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\web\MyChoralRep\index.php(13): CWebApplication->run()
+REQUEST_URI=/web/MyChoralRep/index.php?r=site/login
+in C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php (31)
+in C:\wamp\www\web\MyChoralRep\protected\models\LoginForm.php (52)
+in C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php (101)
+2013/02/18 21:47:48 [error] [exception.CException] exception 'CException' with message 'UserIdentity and its behaviors do not have a method or closure named "redirect".' in C:\wamp\www\web\yiisite\framework\base\CComponent.php:265
+Stack trace:
+#0 C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php(23): CComponent->__call('redirect', Array)
+#1 C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php(23): UserIdentity->redirect('/web/MyChoralRe...')
+#2 C:\wamp\www\web\MyChoralRep\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#3 C:\wamp\www\web\yiisite\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 C:\wamp\www\web\yiisite\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 C:\wamp\www\web\yiisite\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php(101): CModel->validate()
+#7 C:\wamp\www\web\yiisite\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#8 C:\wamp\www\web\yiisite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\web\yiisite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\web\yiisite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): CController->run('login')
+#12 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\wamp\www\web\MyChoralRep\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/web/MyChoralRep/index.php?r=site/login
+HTTP_REFERER=http://localhost/web/MyChoralRep/index.php?r=site/login
+---
+2013/02/18 21:58:39 [error] [exception.CException] exception 'CException' with message 'Users and its behaviors do not have a method or closure named "validatePassword".' in C:\wamp\www\web\yiisite\framework\base\CComponent.php:265
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\db\ar\CActiveRecord.php(225): CComponent->__call('validatePasswor...', Array)
+#1 C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php(27): CActiveRecord->__call('validatePasswor...', Array)
+#2 C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php(27): Users->validatePassword('kitties')
+#3 C:\wamp\www\web\MyChoralRep\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#4 C:\wamp\www\web\yiisite\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#5 C:\wamp\www\web\yiisite\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 C:\wamp\www\web\yiisite\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#7 C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php(101): CModel->validate()
+#8 C:\wamp\www\web\yiisite\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#9 C:\wamp\www\web\yiisite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\wamp\www\web\yiisite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\wamp\www\web\yiisite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): CController->run('login')
+#13 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#14 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\web\MyChoralRep\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/web/MyChoralRep/index.php?r=site/login
+HTTP_REFERER=http://localhost/web/MyChoralRep/index.php?r=site/login
+---
+2013/02/18 22:14:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in C:\wamp\www\web\yiisite\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController('Profile')
+#3 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\web\MyChoralRep\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/web/mychoralrep/index.php?r=Profile
+HTTP_REFERER=http://localhost/web/mychoralrep/index.php?r=gii/controller
+---
+2013/02/18 22:16:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in C:\wamp\www\web\yiisite\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController('Profile')
+#3 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\web\MyChoralRep\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/web/mychoralrep/index.php?r=Profile
+HTTP_REFERER=http://localhost/web/mychoralrep/index.php?r=gii/controller
+---
+2013/02/18 22:16:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in C:\wamp\www\web\yiisite\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController('Profile')
+#3 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\web\MyChoralRep\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/web/mychoralrep/index.php?r=Profile
+HTTP_REFERER=http://localhost/web/mychoralrep/index.php?r=gii/controller
+---
+2013/02/18 22:16:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in C:\wamp\www\web\yiisite\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController('Profile')
+#3 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\web\MyChoralRep\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/web/mychoralrep/index.php?r=Profile
+HTTP_REFERER=http://localhost/web/mychoralrep/index.php?r=gii/controller
+---
+2013/02/18 22:17:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Profile".' in C:\wamp\www\web\yiisite\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\web\CController.php(270): CController->missingAction('Profile')
+#1 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): CController->run('Profile')
+#2 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController('site/Profile')
+#3 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\web\MyChoralRep\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/web/mychoralrep/index.php?r=site/Profile
+---
+2013/02/18 22:17:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Profile".' in C:\wamp\www\web\yiisite\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\web\CController.php(270): CController->missingAction('Profile')
+#1 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): CController->run('Profile')
+#2 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController('site/Profile')
+#3 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\web\MyChoralRep\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/web/mychoralrep/index.php?r=site/Profile
+---
+2013/02/18 22:24:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in C:\wamp\www\web\yiisite\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController('profile')
+#3 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\web\MyChoralRep\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/web/mychoralrep/index.php?r=profile
+HTTP_REFERER=http://localhost/web/mychoralrep/index.php?r=gii/controller
+---
+2013/02/18 23:00:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Profile".' in C:\wamp\www\web\yiisite\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\web\CController.php(270): CController->missingAction('Profile')
+#1 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): CController->run('Profile')
+#2 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController('site/Profile')
+#3 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\web\MyChoralRep\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/web/mychoralrep/index.php?r=site/Profile
+---
+2013/02/18 23:00:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Profile".' in C:\wamp\www\web\yiisite\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\web\CController.php(270): CController->missingAction('Profile')
+#1 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): CController->run('Profile')
+#2 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController('site/Profile')
+#3 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\web\MyChoralRep\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/web/mychoralrep/index.php?r=site/Profile
+---
+2013/02/18 23:00:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "profile".' in C:\wamp\www\web\yiisite\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\web\CController.php(270): CController->missingAction('profile')
+#1 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): CController->run('profile')
+#2 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController('site/profile')
+#3 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\web\MyChoralRep\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/web/mychoralrep/index.php?r=site/profile
+---
+2013/02/18 23:02:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Profile=profile.php".' in C:\wamp\www\web\yiisite\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\web\CController.php(270): CController->missingAction('Profile=profile...')
+#1 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): CController->run('Profile=profile...')
+#2 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController('site/Profile=pr...')
+#3 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\web\MyChoralRep\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/web/mychoralrep/index.php?r=site/Profile=profile.php
+---
+2013/02/18 23:02:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "profile=profile.php".' in C:\wamp\www\web\yiisite\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\web\CController.php(270): CController->missingAction('profile=profile...')
+#1 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): CController->run('profile=profile...')
+#2 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController('site/profile=pr...')
+#3 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\web\MyChoralRep\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/web/mychoralrep/index.php?r=site/profile=profile.php
+---
+2013/02/18 23:02:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "profile=profile.php".' in C:\wamp\www\web\yiisite\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\web\CController.php(270): CController->missingAction('profile=profile...')
+#1 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): CController->run('profile=profile...')
+#2 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController('profile/profile...')
+#3 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\web\MyChoralRep\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/web/mychoralrep/index.php?r=profile/profile=profile.php
+---
+2013/02/18 23:48:42 [error] [php] Use of undefined constant profileURL - assumed 'profileURL' (C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php:102)
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\web\yiisite\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\wamp\www\web\MyChoralRep\index.php(13): CWebApplication->run()
+REQUEST_URI=/web/mychoralrep/index.php?r=site/login
+in C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php (102)
+in C:\wamp\www\web\MyChoralRep\index.php (13)
+2013/02/18 23:51:32 [error] [php] Undefined variable: username (C:\wamp\www\web\MyChoralRep\protected\views\profile\profile.php:9)
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\web\CController.php(869): ProfileController->renderFile()
+#1 C:\wamp\www\web\yiisite\framework\web\CController.php(782): ProfileController->renderPartial()
+#2 C:\wamp\www\web\MyChoralRep\protected\controllers\ProfileController.php(7): ProfileController->render()
+#3 C:\wamp\www\web\yiisite\framework\web\actions\CInlineAction.php(49): ProfileController->actionProfile()
+#4 C:\wamp\www\web\yiisite\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\web\yiisite\framework\web\CController.php(286): ProfileController->runAction()
+#6 C:\wamp\www\web\yiisite\framework\web\CController.php(265): ProfileController->runActionWithFilters()
+#7 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): ProfileController->run()
+#8 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\web\MyChoralRep\index.php(13): CWebApplication->run()
+REQUEST_URI=/web/mychoralrep/index.php?r=profile/profile
+in C:\wamp\www\web\MyChoralRep\protected\views\profile\profile.php (9)
+in C:\wamp\www\web\MyChoralRep\protected\controllers\ProfileController.php (7)
+in C:\wamp\www\web\MyChoralRep\index.php (13)
+2013/02/19 03:34:50 [error] [php] Trying to get property of non-object (C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php:29)
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#1 C:\wamp\www\web\yiisite\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php(101): LoginForm->validate()
+#3 C:\wamp\www\web\yiisite\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\wamp\www\web\yiisite\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\web\yiisite\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\wamp\www\web\yiisite\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\web\MyChoralRep\index.php(13): CWebApplication->run()
+REQUEST_URI=/web/mychoralrep/index.php?r=site/login
+in C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php (29)
+in C:\wamp\www\web\MyChoralRep\protected\models\LoginForm.php (52)
+in C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php (101)
+2013/02/19 03:40:56 [error] [php] Trying to get property of non-object (C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php:29)
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#1 C:\wamp\www\web\yiisite\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php(101): LoginForm->validate()
+#3 C:\wamp\www\web\yiisite\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\wamp\www\web\yiisite\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\web\yiisite\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\wamp\www\web\yiisite\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\web\MyChoralRep\index.php(13): CWebApplication->run()
+REQUEST_URI=/web/mychoralrep/index.php?r=site/login
+in C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php (29)
+in C:\wamp\www\web\MyChoralRep\protected\models\LoginForm.php (52)
+in C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php (101)
+2013/02/19 03:48:20 [error] [php] Trying to get property of non-object (C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php:29)
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#1 C:\wamp\www\web\yiisite\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php(101): LoginForm->validate()
+#3 C:\wamp\www\web\yiisite\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\wamp\www\web\yiisite\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\web\yiisite\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\wamp\www\web\yiisite\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\web\MyChoralRep\index.php(13): CWebApplication->run()
+REQUEST_URI=/web/mychoralrep/index.php?r=site/login
+in C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php (29)
+in C:\wamp\www\web\MyChoralRep\protected\models\LoginForm.php (52)
+in C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php (101)
+2013/02/19 03:50:06 [error] [exception.CDbException] exception 'CDbException' with message 'Table "users" does not have a column named "LOWER(Email)=?".' in C:\wamp\www\web\yiisite\framework\db\schema\CDbCommandBuilder.php:591
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\db\ar\CActiveRecord.php(1464): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php(21): CActiveRecord->findByAttributes(Array)
+#2 C:\wamp\www\web\MyChoralRep\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#3 C:\wamp\www\web\yiisite\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 C:\wamp\www\web\yiisite\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 C:\wamp\www\web\yiisite\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php(101): CModel->validate()
+#7 C:\wamp\www\web\yiisite\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#8 C:\wamp\www\web\yiisite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\web\yiisite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\web\yiisite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): CController->run('login')
+#12 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\wamp\www\web\MyChoralRep\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/web/mychoralrep/index.php?r=site/login
+HTTP_REFERER=http://localhost/web/mychoralrep/index.php?r=site/login
+---
+2013/02/19 03:50:42 [error] [php] Trying to get property of non-object (C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php:29)
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#1 C:\wamp\www\web\yiisite\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php(101): LoginForm->validate()
+#3 C:\wamp\www\web\yiisite\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\wamp\www\web\yiisite\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\web\yiisite\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\wamp\www\web\yiisite\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\web\MyChoralRep\index.php(13): CWebApplication->run()
+REQUEST_URI=/web/mychoralrep/index.php?r=site/login
+in C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php (29)
+in C:\wamp\www\web\MyChoralRep\protected\models\LoginForm.php (52)
+in C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php (101)
+2013/02/19 03:51:09 [error] [php] Trying to get property of non-object (C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php:29)
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#1 C:\wamp\www\web\yiisite\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php(101): LoginForm->validate()
+#3 C:\wamp\www\web\yiisite\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\wamp\www\web\yiisite\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\web\yiisite\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\wamp\www\web\yiisite\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\web\MyChoralRep\index.php(13): CWebApplication->run()
+REQUEST_URI=/web/mychoralrep/index.php?r=site/login
+in C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php (29)
+in C:\wamp\www\web\MyChoralRep\protected\models\LoginForm.php (52)
+in C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php (101)
+2013/02/19 03:53:13 [error] [php] Trying to get property of non-object (C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php:29)
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#1 C:\wamp\www\web\yiisite\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php(101): LoginForm->validate()
+#3 C:\wamp\www\web\yiisite\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\wamp\www\web\yiisite\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\web\yiisite\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\wamp\www\web\yiisite\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\web\MyChoralRep\index.php(13): CWebApplication->run()
+REQUEST_URI=/web/mychoralrep/index.php?r=site/login
+in C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php (29)
+in C:\wamp\www\web\MyChoralRep\protected\models\LoginForm.php (52)
+in C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php (101)
+2013/02/19 04:03:45 [error] [php] Trying to get property of non-object (C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php:29)
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#1 C:\wamp\www\web\yiisite\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php(101): LoginForm->validate()
+#3 C:\wamp\www\web\yiisite\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\wamp\www\web\yiisite\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\web\yiisite\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\wamp\www\web\yiisite\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\web\MyChoralRep\index.php(13): CWebApplication->run()
+REQUEST_URI=/web/mychoralrep/index.php?r=site/login
+in C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php (29)
+in C:\wamp\www\web\MyChoralRep\protected\models\LoginForm.php (52)
+in C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php (101)
+2013/02/19 04:11:45 [error] [php] Trying to get property of non-object (C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php:29)
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#1 C:\wamp\www\web\yiisite\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php(101): LoginForm->validate()
+#3 C:\wamp\www\web\yiisite\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\wamp\www\web\yiisite\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\web\yiisite\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\wamp\www\web\yiisite\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\web\MyChoralRep\index.php(13): CWebApplication->run()
+REQUEST_URI=/web/mychoralrep/index.php?r=site/login
+in C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php (29)
+in C:\wamp\www\web\MyChoralRep\protected\models\LoginForm.php (52)
+in C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php (101)
+2013/02/19 04:11:53 [error] [php] Trying to get property of non-object (C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php:29)
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#1 C:\wamp\www\web\yiisite\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php(101): LoginForm->validate()
+#3 C:\wamp\www\web\yiisite\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\wamp\www\web\yiisite\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\web\yiisite\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\wamp\www\web\yiisite\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\web\MyChoralRep\index.php(13): CWebApplication->run()
+REQUEST_URI=/web/mychoralrep/index.php?r=site/login
+in C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php (29)
+in C:\wamp\www\web\MyChoralRep\protected\models\LoginForm.php (52)
+in C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php (101)
+2013/02/19 04:12:15 [error] [php] Trying to get property of non-object (C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php:29)
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#1 C:\wamp\www\web\yiisite\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php(101): LoginForm->validate()
+#3 C:\wamp\www\web\yiisite\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\wamp\www\web\yiisite\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\web\yiisite\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\wamp\www\web\yiisite\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\web\MyChoralRep\index.php(13): CWebApplication->run()
+REQUEST_URI=/web/mychoralrep/index.php?r=site/login
+in C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php (29)
+in C:\wamp\www\web\MyChoralRep\protected\models\LoginForm.php (52)
+in C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php (101)
+2013/02/19 04:12:35 [error] [php] Trying to get property of non-object (C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php:29)
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#1 C:\wamp\www\web\yiisite\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php(101): LoginForm->validate()
+#3 C:\wamp\www\web\yiisite\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\wamp\www\web\yiisite\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\web\yiisite\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\wamp\www\web\yiisite\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\web\MyChoralRep\index.php(13): CWebApplication->run()
+REQUEST_URI=/web/mychoralrep/index.php?r=site/login
+in C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php (29)
+in C:\wamp\www\web\MyChoralRep\protected\models\LoginForm.php (52)
+in C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php (101)
+2013/02/19 04:16:38 [error] [php] include(User.php): failed to open stream: No such file or directory (C:\wamp\www\web\yiisite\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php(21): spl_autoload_call()
+#1 C:\wamp\www\web\MyChoralRep\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 C:\wamp\www\web\yiisite\framework\validators\CInlineValidator.php(42): LoginForm->authenticate()
+#3 C:\wamp\www\web\yiisite\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#4 C:\wamp\www\web\yiisite\framework\base\CModel.php(159): CInlineValidator->validate()
+#5 C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php(101): LoginForm->validate()
+#6 C:\wamp\www\web\yiisite\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\wamp\www\web\yiisite\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\wamp\www\web\yiisite\framework\web\CController.php(286): SiteController->runAction()
+#9 C:\wamp\www\web\yiisite\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#10 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): SiteController->run()
+#11 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#13 C:\wamp\www\web\MyChoralRep\index.php(13): CWebApplication->run()
+REQUEST_URI=/web/mychoralrep/index.php?r=site/login
+in C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php (21)
+in C:\wamp\www\web\MyChoralRep\protected\models\LoginForm.php (52)
+in C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php (101)
+2013/02/19 04:17:06 [error] [php] include(User.php): failed to open stream: No such file or directory (C:\wamp\www\web\yiisite\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php(21): spl_autoload_call()
+#1 C:\wamp\www\web\MyChoralRep\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 C:\wamp\www\web\yiisite\framework\validators\CInlineValidator.php(42): LoginForm->authenticate()
+#3 C:\wamp\www\web\yiisite\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#4 C:\wamp\www\web\yiisite\framework\base\CModel.php(159): CInlineValidator->validate()
+#5 C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php(101): LoginForm->validate()
+#6 C:\wamp\www\web\yiisite\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\wamp\www\web\yiisite\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\wamp\www\web\yiisite\framework\web\CController.php(286): SiteController->runAction()
+#9 C:\wamp\www\web\yiisite\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#10 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): SiteController->run()
+#11 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#13 C:\wamp\www\web\MyChoralRep\index.php(13): CWebApplication->run()
+REQUEST_URI=/web/mychoralrep/index.php?r=site/login
+in C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php (21)
+in C:\wamp\www\web\MyChoralRep\protected\models\LoginForm.php (52)
+in C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php (101)
+2013/02/19 04:17:43 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT * FROM `users` `t` WHERE LOWER(Email)=? LIMIT 1.
+in C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php (21)
+in C:\wamp\www\web\MyChoralRep\protected\models\LoginForm.php (52)
+in C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php (101)
+2013/02/19 04:17:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT * FROM `users` `t` WHERE LOWER(Email)=? LIMIT 1' in C:\wamp\www\web\yiisite\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\db\CDbCommand.php(414): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\wamp\www\web\yiisite\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryRow()
+#2 C:\wamp\www\web\yiisite\framework\db\ar\CActiveRecord.php(1402): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php(21): CActiveRecord->find('LOWER(Email)=?', Array)
+#4 C:\wamp\www\web\MyChoralRep\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#5 C:\wamp\www\web\yiisite\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#6 C:\wamp\www\web\yiisite\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 C:\wamp\www\web\yiisite\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#8 C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php(101): CModel->validate()
+#9 C:\wamp\www\web\yiisite\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#10 C:\wamp\www\web\yiisite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\web\yiisite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\web\yiisite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): CController->run('login')
+#14 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#15 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\web\MyChoralRep\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/web/mychoralrep/index.php?r=site/login
+HTTP_REFERER=http://localhost/web/mychoralrep/index.php?r=site/login
+---
+2013/02/19 04:29:37 [error] [php] Trying to get property of non-object (C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php:29)
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#1 C:\wamp\www\web\yiisite\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php(101): LoginForm->validate()
+#3 C:\wamp\www\web\yiisite\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\wamp\www\web\yiisite\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\web\yiisite\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\wamp\www\web\yiisite\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\web\MyChoralRep\index.php(13): CWebApplication->run()
+REQUEST_URI=/web/mychoralrep/index.php?r=site/login
+in C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php (29)
+in C:\wamp\www\web\MyChoralRep\protected\models\LoginForm.php (52)
+in C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php (101)
+2013/02/19 04:30:41 [error] [php] Trying to get property of non-object (C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php:29)
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#1 C:\wamp\www\web\yiisite\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php(101): LoginForm->validate()
+#3 C:\wamp\www\web\yiisite\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\wamp\www\web\yiisite\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\web\yiisite\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\wamp\www\web\yiisite\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\web\MyChoralRep\index.php(13): CWebApplication->run()
+REQUEST_URI=/web/mychoralrep/index.php?r=site/login
+in C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php (29)
+in C:\wamp\www\web\MyChoralRep\protected\models\LoginForm.php (52)
+in C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php (101)
+2013/02/19 04:32:48 [error] [php] Trying to get property of non-object (C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php:29)
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#1 C:\wamp\www\web\yiisite\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php(101): LoginForm->validate()
+#3 C:\wamp\www\web\yiisite\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\wamp\www\web\yiisite\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\web\yiisite\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\wamp\www\web\yiisite\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\web\MyChoralRep\index.php(13): CWebApplication->run()
+REQUEST_URI=/web/mychoralrep/index.php?r=site/login
+in C:\wamp\www\web\MyChoralRep\protected\components\UserIdentity.php (29)
+in C:\wamp\www\web\MyChoralRep\protected\models\LoginForm.php (52)
+in C:\wamp\www\web\MyChoralRep\protected\controllers\SiteController.php (101)
+2013/02/19 04:58:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in C:\wamp\www\web\yiisite\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController('profile')
+#3 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\web\MyChoralRep\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/web/mychoralrep/index.php?r=profile
+---
+2013/02/19 04:58:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "profile".' in C:\wamp\www\web\yiisite\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\web\CController.php(270): CController->missingAction('profile')
+#1 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): CController->run('profile')
+#2 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController('site/profile')
+#3 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\web\MyChoralRep\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/web/mychoralrep/index.php?r=site/profile
+---
+2013/02/19 05:03:40 [error] [php] Undefined variable: model (C:\wamp\www\web\MyChoralRep\protected\views\profile\view.php:7)
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\web\CController.php(869): ProfileController->renderFile()
+#1 C:\wamp\www\web\yiisite\framework\web\CController.php(782): ProfileController->renderPartial()
+#2 C:\wamp\www\web\MyChoralRep\protected\controllers\ProfileController.php(12): ProfileController->render()
+#3 C:\wamp\www\web\yiisite\framework\web\actions\CInlineAction.php(49): ProfileController->actionView()
+#4 C:\wamp\www\web\yiisite\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\web\yiisite\framework\web\CController.php(286): ProfileController->runAction()
+#6 C:\wamp\www\web\yiisite\framework\web\CController.php(265): ProfileController->runActionWithFilters()
+#7 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): ProfileController->run()
+#8 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\web\MyChoralRep\index.php(13): CWebApplication->run()
+REQUEST_URI=/web/mychoralrep/index.php?r=profile/view
+in C:\wamp\www\web\MyChoralRep\protected\views\profile\view.php (7)
+in C:\wamp\www\web\MyChoralRep\protected\controllers\ProfileController.php (12)
+in C:\wamp\www\web\MyChoralRep\index.php (13)
+2013/02/19 05:10:50 [error] [php] Undefined variable: model (C:\wamp\www\web\MyChoralRep\protected\views\profile\view.php:7)
+Stack trace:
+#0 C:\wamp\www\web\yiisite\framework\web\CController.php(869): ProfileController->renderFile()
+#1 C:\wamp\www\web\yiisite\framework\web\CController.php(782): ProfileController->renderPartial()
+#2 C:\wamp\www\web\MyChoralRep\protected\controllers\ProfileController.php(12): ProfileController->render()
+#3 C:\wamp\www\web\yiisite\framework\web\actions\CInlineAction.php(49): ProfileController->actionView()
+#4 C:\wamp\www\web\yiisite\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\web\yiisite\framework\web\CController.php(286): ProfileController->runAction()
+#6 C:\wamp\www\web\yiisite\framework\web\CController.php(265): ProfileController->runActionWithFilters()
+#7 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): ProfileController->run()
+#8 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\web\MyChoralRep\index.php(13): CWebApplication->run()
+REQUEST_URI=/web/mychoralrep/index.php?r=profile/view
+in C:\wamp\www\web\MyChoralRep\protected\views\profile\view.php (7)
+in C:\wamp\www\web\MyChoralRep\protected\controllers\ProfileController.php (12)
+in C:\wamp\www\web\MyChoralRep\index.php (13)
+2013/02/19 05:12:11 [error] [exception.CException] exception 'CException' with message 'ProfileController and its behaviors do not have a method or closure named "loadModel".' in C:\wamp\www\web\yiisite\framework\base\CComponent.php:265
+Stack trace:
+#0 C:\wamp\www\web\MyChoralRep\protected\controllers\ProfileController.php(14): CComponent->__call('loadModel', Array)
+#1 C:\wamp\www\web\MyChoralRep\protected\controllers\ProfileController.php(14): ProfileController->loadModel(1)
+#2 C:\wamp\www\web\yiisite\framework\web\actions\CInlineAction.php(49): ProfileController->actionView()
+#3 C:\wamp\www\web\yiisite\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\web\yiisite\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\web\yiisite\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(282): CController->run('view')
+#7 C:\wamp\www\web\yiisite\framework\web\CWebApplication.php(141): CWebApplication->runController('profile/view')
+#8 C:\wamp\www\web\yiisite\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 C:\wamp\www\web\MyChoralRep\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/web/mychoralrep/index.php?r=profile/view
+---

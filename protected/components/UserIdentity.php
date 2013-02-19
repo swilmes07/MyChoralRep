@@ -17,19 +17,19 @@ class UserIdentity extends CUserIdentity
 	public function authenticate()
 	{
 		
-		$username=strtolower($this->username);
-        $user=Users::model()->find('LOWER(Email)=?',array($username));
-        if ($user == 'admin'){
-        		$this->redirect(Yii::app()->homeUrl);
-        }
-        if($user===null)
+		$name=strtolower($this->username);
+        $user=Users::model()->findByAttributes(array('Email'=>$this->username));
+
+        if($user===null){
 			$this->errorCode=self::ERROR_USERNAME_INVALID;
-		elseif(!$user->validatePassword($this->password))
+		}else if(!$user->validatePassword($this->password)){
 			$this->errorCode=self::ERROR_PASSWORD_INVALID;
-		else
+		}else{
 			$this->_id=$user->ID;
             $this->username=$user->Email;
             $this->errorCode=self::ERROR_NONE;
+        }
+		
 		return !$this->errorCode;
 	}
 

@@ -99,7 +99,7 @@ class SiteController extends Controller
 			$model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
+				$this->redirect('index.php?r=profile/view');
 		}
 		// display the login form
 		$this->render('login',array('model'=>$model));
@@ -134,9 +134,8 @@ class SiteController extends Controller
        	    $model->save();
        	    $id = UserIdentity::getId;
        	    echo "$id";
-       	    //$this->redirect(Yii::app()->homeUrl);
+       	    $this->redirect(Yii::app()->homeUrl);
        	 }
     	}
     	$this->render('Register',array('model'=>$model));
-	}
-}
+	}}
