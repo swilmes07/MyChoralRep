@@ -17,7 +17,7 @@ class ProfileController extends Controller
 
 	public function actionView()
 	{
-		$id=1;
+                $id=Yii::app()->user->id;
 		$this->render('view', array(
 			'model'=>$this->loadModel($id)));
 	}
