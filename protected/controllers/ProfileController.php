@@ -12,7 +12,9 @@ class ProfileController extends Controller
 
 	public function actionEdit()
 	{
-		$this->render('edit');
+                $id=Yii::app()->user->id;
+		$this->render('edit', array(
+			'model'=>$this->loadModel($id)));
 	}
 
 	public function actionView()
@@ -48,4 +50,25 @@ class ProfileController extends Controller
 		);
 	}
 	*/
+        public function actionUpdate($id)
+	{
+		$model=$this->loadModel($id);
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['Users']))
+		{
+			$model->attributes=$_POST['Users'];
+			if($model->save())
+				$this->redirect(array('view','id'=>$model->ID));
+		}
+
+		$this->render('update',array(
+			'model'=>$model,
+		));
+	}
+        
+        
+        
 }
