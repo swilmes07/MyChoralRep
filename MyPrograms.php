@@ -1,6 +1,6 @@
 <?php
 include('lock.php');
-	$sql = mysql_query("SELECT * FROM programs WHERE ID=1");
+	$sql = mysql_query("SELECT * FROM programs WHERE ID=$login_id");
 	while($row = mysql_fetch_array($sql, MYSQL_ASSOC))
 	{
 		$programs[] = $row;
@@ -42,13 +42,17 @@ include('lock.php');
 				</div>
 			</div>
 			<div id="content">
+				</br>
+				</br>
+				<H1><font color="black"> Your Programs: </font></H1>
 				<ul>
-					<?php foreach($programs as $program): ?>					
+					<?php foreach($programs as $program): ?>	
+						</br>
 						<li>
 						Program Title: <a href="program-view.php?id=<?php print $program['Program_ID'];?>"> <?php print $program['Program_Name'];?></a> <br />
 						Program Date: <?php print $program['Program_Date'];?>
-						
 						</li>
+						
 					<?php endforeach; ?>
 				</ul>
 			</div>
