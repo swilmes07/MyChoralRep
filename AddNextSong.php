@@ -33,7 +33,7 @@ if ($_POST['nextsong']){
 		  VALUES('$p_ID', '$login_id','$song','$composer','$arranger','$tnotes')");
 	
 	die(header("Location: NextSong.php"));
-}else if($_POST['done']){
+}else if($_POST['done'])){
 	if(isset($_POST['SongName']){
 		$song=$_POST['SongName'];
 		$composer=$_POST['Composer'];

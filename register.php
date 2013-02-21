@@ -4,21 +4,33 @@
 <legend>Register</legend>
 <label for='FirstName' >First Name*:   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</label>
 <input type='text' name='FirstName' id='FirstName' maxlength='30'/></br></br>
+
 <label for='Lastname' >Last Name*: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</label>
 <input type='text' name='LastName' id='LastName' maxlength="30" /></br></br>
+
 <label for='Email' >Email Address*:  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</label>
 <input type='text' name='Email' id='Email' maxlength="50" /></br></br>
+
 <label for='Password' >Password*: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</label>
 <input type='password' name='Password' id='Password' maxlength="30" /></br></br>
+
 <label for='Password2' >Re-enter Password* : &nbsp &nbsp &nbsp </label>
 <input type='password' name='Password2' id='Password2' maxlength="30" /></br></br>
-<label for='dropdown' >Skill Level*: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </label>
-<select name='dropdown'" value="options">
-<option value='Elementary'>Elementary</option>
-<option value='HighSchool'>Junior/Senior High</option>
-<option value='University'>University</option>
-<option value='Advanced'>Advanced</option>
-</SELECT></br></br>
+
+<label for='School' >School:    &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</label>
+<input type='text' name='School' id='School' maxlength="50"/><br/><br/>
+
+<label for='Job' >Job Title:  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</label>
+<input type='text' name='Job' id='Job' maxlength="50"/><br/><br/>
+
+<form>Teaching Level*: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <br/>
+<input type="checkbox" name="skill[]" id ='1' value="Elementary">Elementary<br/>
+<input type="checkbox" name="skill[]" id ='2' value="Junior High">Junior High<br/>
+<!--<input type="checkbox" name="skill" id ='3' value="High School">High School<br/>
+<input type="checkbox" name="skill" id ='4' value="University">University<br/>
+<input type="checkbox" name="skill" id ='5' value="Community Chorus">Community Chorus<br/>-->
+</form>
 <input type='submit' name='Submit' value='Submit' />
 </fieldset>
 </form>

@@ -16,9 +16,10 @@
 <label for='dropdown' >Skill Level*: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </label>
 <select name='dropdown'" value="options">
 <option value='Elementary'>Elementary</option>
-<option value='HighSchool'>Junior/Senior High</option>
+<option value='JuniorHigh'>Junior High</option>
+<option value='HighSchool'>High School</option>
 <option value='University'>University</option>
-<option value='Advanced'>Advanced</option>
+<option value='CommunityChorus'>Community Chorus</option>
 </SELECT></br></br>
 <input type='submit' name='Submit' value='Submit' />
 </fieldset>
