@@ -1,5 +1,7 @@
-
 <?php
+
+
+
 $mysql_hostname = "localhost";
 	$mysql_user = "root";
 	$mysql_password = "";
@@ -14,7 +16,8 @@ if ($pass1 == $pass2){
 	$first=$_POST['FirstName'];
 	$last=$_POST['LastName'];
 	$email=$_POST['Email'];
-	$drop=$_POST['dropdown'];
+	$drop=$_POST['skill'];
+	
 	//$sql="INSERT INTO members (FirstName, LastName, UserID, Pass, SkillLevel)
 		  //VALUES('$first','$last','$email','$pass1','$drop')";
 	mysql_query("INSERT INTO members (FirstName, LastName, UserID, Pass, SkillLevel)

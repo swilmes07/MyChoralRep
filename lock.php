@@ -12,6 +12,7 @@ $login_session=$row['UserID'];
 $login_name=$row['FirstName'];
 $login_last=$row['LastName'];
 $login_pass=$row['Pass'];
+$login_skill=$row['SkillLevel'];
 
 
 if(!isset($user_check))

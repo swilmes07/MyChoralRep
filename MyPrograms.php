@@ -29,6 +29,7 @@ include('lock.php');
 				 <div class="padding">
 					<?php include('view.php'); ?>
 					<h4><font color="black">Welcome back <?php echo $login_name; ?>!</font></h4>
+					<p>Teaching Level: <?php echo $login_skill; ?></p>
 				</div>
 				<div id="login-content">
 					<ul class="login-menu">
