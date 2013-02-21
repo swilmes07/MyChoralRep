@@ -21,14 +21,16 @@ include('lock.php');
 			</div>
 			<div id="sidebar-a">
 				 <div class="padding">
+					<?php include('view.php'); ?>
 					<h4><font color="black">Welcome back <?php echo $login_name; ?>!</font></h4>
 				</div>
 				<div id="login-content">
 					<ul class="login-menu">
-						<li id="Edit Profile"><a href="#">Edit Profile</a></li>
-						<li id="Add Program"><a href="#">Add Program</a></li>
-						<li id="My Programs"><a href="#">My Programs</a></li>
-						<li id="Most Popular"><a href="#">Most Popular</a></li>
+						<li id="Edit Profile"><a href="updateUser.php">Edit Profile</a></li>
+						<li id="Profile Picture"><a href="upload.php">Change Profile Picture</a></li>
+						<li id="Add Program"><a href="AddProgram.php">Add Program</a></li>
+						<li id="My Programs"><a href="MyPrograms.php">My Programs</a></li>
+						<li id="Most Popular"><a href="MostPopular.php">Most Popular</a></li>
 						<li id="Log Out"><a href="logout.php">Log Out</a>
 					</ul>
 				</div>
