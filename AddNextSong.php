@@ -34,7 +34,7 @@ if ($_POST['nextsong']){
 	
 	die(header("Location: NextSong.php"));
 }else if($_POST['done']){
-	if(isset($_POST['SongName'])){
+	if(isset($_POST['SongName']){
 		$song=$_POST['SongName'];
 		$composer=$_POST['Composer'];
 		$arranger=$_POST['Arranger'];
