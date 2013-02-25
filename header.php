@@ -20,4 +20,3 @@ include('lock.php');
 			<div id="header">
 				
 			</div>
-<?php?>

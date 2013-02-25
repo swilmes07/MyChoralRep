@@ -1,5 +1,5 @@
 <form id='register' action='insert.php' method='post'
-    accept-charset='UTF-8'>
+    accept-charset='UTF-8' enctype='multipart/form-data'>
 <fieldset >
 <legend>Register</legend>
 <label for='FirstName' >First Name*:   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</label>
@@ -24,14 +24,20 @@
 <label for='Job' >Job Title:  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</label>
 <input type='text' name='Job' id='Job' maxlength="50"/><br/><br/>
 
-<form>Teaching Level*: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <br/>
+Teaching Level*: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <br/>
 <input type="checkbox" name="skill[]" id ='1' value="Elementary">Elementary<br/>
 <input type="checkbox" name="skill[]" id ='2' value="Junior High">Junior High<br/>
-<!--<input type="checkbox" name="skill" id ='3' value="High School">High School<br/>
-<input type="checkbox" name="skill" id ='4' value="University">University<br/>
-<input type="checkbox" name="skill" id ='5' value="Community Chorus">Community Chorus<br/>-->
-</form>
-<input type='submit' name='Submit' value='Submit' />
+<input type="checkbox" name="skill[]" id ='3' value="High School">High School<br/>
+<input type="checkbox" name="skill[]" id ='4' value="University">University<br/>
+<input type="checkbox" name="skill[]" id ='5' value="Community Chorus">Community Chorus<br/>
+
+<br/>
+<label for='myfile'>Profile Picture:</label>
+
+File: <input type='file' name="myfile"/>
+
+<br/>
+<input type='submit' name="submit" value='Submit' />
 </fieldset>
 </form>
 
