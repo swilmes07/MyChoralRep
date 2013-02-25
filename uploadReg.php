@@ -1,47 +1,14 @@
-<?php
-include('header.php');
-
-
-
-echo "<h1>Change profile picture for $login_name.</h1>";
-
-
-
-/*if (isset($_POST['submit']))
-{
-//Get File Attributes
-$name = $_FILES['myfile']['name'];
-$size = $_FILES['myfile']['size'];
-$tmp_name = $_FILES['myfile']['tmp_name'];
-
-if ($name)
-{
-	//Start Upload Process
-	$location = "avatars/.$name";
-	move_uploaded_file($tmp_name,$location);
-	$query = mysql_query("UPDATE members SET imagelocation='$location' WHERE UserID='$login_session'");
-	die("Your Profile Image Has been uploaded! <a href='welcome.php'>Back To Profile</a>");
-}
-else{
-
-die("Please select a file!");
-}
-}*/
-echo "</br> </br><h2>Please select an image to upload:</h2> 
-<form action='upload.php' method='POST' enctype='multipart/form-data'>
-File: <input type='file' name='myfile'><br/><br/> <input type='submit' name='submit' value='Upload!'> 
-</form>";
-
-//include ('footer.php');
+<?php 
 
 define ("MAX_SIZE","400");
 
  $errors=0;
  
- if($_SERVER["REQUEST_METHOD"] == "POST")
+if($_SERVER["REQUEST_METHOD"] == "POST")
  {
         $image =$_FILES["myfile"]["name"];
  $uploadedfile = $_FILES['myfile']['tmp_name'];
+
 
   if ($image) 
   {
@@ -60,7 +27,8 @@ $errors=1;
  
 if ($size > MAX_SIZE*1024)
 {
- echo "You have exceeded the size limit";
+ echo "You have exceeded the size limit. Please <a href=registration.php> return to registration</a>";
+ exit;
  $errors=1;
 }
  
@@ -109,17 +77,12 @@ imagedestroy($tmp);
 }
 //If no errors registred, print the success message
 
- if(isset($_POST['submit']) && !$errors) 
- {
+// if(isset($_POST['submit']) && !$errors) 
+ //{
    // mysql_query("update SQL statement ");
-  $location = $filename;
-	//move_uploaded_file($tmp_name,$location);
-	$query = mysql_query("UPDATE members SET imagelocation='$location' WHERE UserID='$login_session'");
-	die("Your Profile Image Has been uploaded! <a href='welcome.php'>Back To Profile</a>");
-  echo "Image Uploaded Successfully!";
-  echo $filename;
-
- }
+  //$location = $filename;
+  
+ // }
  function getExtension($str) {
 
          $i = strrpos($str,".");
@@ -128,7 +91,4 @@ imagedestroy($tmp);
          $ext = substr($str,$i+1,$l);
 		 return $ext;
 	}
- ?>
-</body>
-</html>
-
+  ?>

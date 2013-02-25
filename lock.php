@@ -12,6 +12,8 @@ $login_session=$row['UserID'];
 $login_name=$row['FirstName'];
 $login_last=$row['LastName'];
 $login_pass=$row['Pass'];
+$login_school=$row['School'];
+$login_job=$row['Job'];
 $login_skill=$row['SkillLevel'];
 
 
