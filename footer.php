@@ -2,15 +2,11 @@
 
 			<div id="footer">
 					<div id="altnav">
+						Copyright &copy; MyChoralRep 2013 -
 						<a href="#">About</a> -
-						<a href="#">Services</a> -
-						<a href="#">Portfolio</a> -
-						<a href="#">Contact Us</a> -
-						<a href="#">Terms of Trade</a>
+						<a href="#">Contact Us</a> 
 					</div>
-				Copyright © MyChoralRep
-	 
-				Powered by <a href="localhost/hirdesigns">HIR Designs</a> 
+				Powered by <a href="HIRindex.php">HIR Designs</a> 
 		</div>
 	</body>
 	</html>
