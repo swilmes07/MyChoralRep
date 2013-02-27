@@ -69,6 +69,7 @@ h1{
 #header {
 	background: url(../images/sample.jpg);
 	height: 150px;
+	margin-bottom: 10px;
 }
 #sidebar-a {
 	margin-top: 8px;
@@ -90,5 +91,6 @@ h1{
 }
 #footer {
 	clear: both;
+	margin-top: 25%;
 	height: 66px;
 }

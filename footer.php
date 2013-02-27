@@ -1,6 +1,7 @@
 <?php?>
 
 			<div id="footer">
+				<hr>
 					<div id="altnav">
 						Copyright &copy; MyChoralRep 2013 -
 						<a href="#">About</a> -
