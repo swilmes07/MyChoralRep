@@ -42,12 +42,12 @@ include('lock.php');
 				</div>
 				<div id="login-content">
 					<ul class="login-menu">
-						<li id="Edit Profile"><a href="updateUser.php">Edit Profile</a></li>
-						<li id="Profile Picture"><a href="upload.php">Change Profile Picture</a></li>
-						<li id="Add Program"><a href="AddProgram.php">Add Program</a></li>
-						<li id="My Programs"><a href="MyPrograms.php">My Programs</a></li>
-						<li id="Most Popular"><a href="MostPopular.php">Most Popular</a></li>
-						<li id="Log Out"><a href="logout.php">Log Out</a>
+						<li><a href="updateUser.php"><img src="images/EditProfile.jpg" border="0"/></a></li>
+						<li><a href="upload.php"><img src="images/ProfilePicture.jpg" border="0"/></a></li>
+						<li><a href="AddProgram.php"><img src="images/AddProgram.jpg" border="0"/></a></li>
+						<li id="My Programs"><a href="MyPrograms.php"><img src="images/MyPrograms.jpg" border="0"/></a></li>
+						<li id="Most Popular"><a href="MostPopular.php"><img src="images/MostPopular.jpg" border="0"/></a></li>
+						<li id="Log Out"><a href="logout.php"><img src="images/LogOut.jpg" border="0"/></a>
 					</ul>
 				</div>
 			</div>
@@ -66,17 +66,8 @@ include('lock.php');
 					<?php endforeach; ?>
 				</ul>
 			</div>
-			<div id="footer">
-					<div id="altnav">
-						<a href="#">About</a> -
-						<a href="#">Services</a> -
-						<a href="#">Portfolio</a> -
-						<a href="#">Contact Us</a> -
-						<a href="#">Terms of Trade</a>
-					</div>
-				Copyright © MyChoralRep
-	 
-				Powered by <a href="localhost/hirdesigns">HIR Designs</a> 
+			<?php include('footer.php');?>
+			
 		</div>
 	</body>
 	</html>

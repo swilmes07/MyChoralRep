@@ -8,7 +8,7 @@ if (mysql_num_rows($query)==0){
 	else{
 	$row = mysql_fetch_assoc($query);
 	$location = $row['imagelocation'];
-	echo "<img src='$location' width='100' height='100'>";
+	echo "<img id='move' src='$location'>";
 	}
 
 

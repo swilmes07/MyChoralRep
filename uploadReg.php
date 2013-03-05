@@ -49,7 +49,7 @@ $src = imagecreatefromgif($uploadedfile);
  
 list($width,$height)=getimagesize($uploadedfile);
 
-$newwidth=60;
+$newwidth=100;
 $newheight=($height/$width)*$newwidth;
 $tmp=imagecreatetruecolor($newwidth,$newheight);
 

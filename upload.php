@@ -29,7 +29,8 @@ die("Please select a file!");
 }*/
 echo "</br> </br><h2>Please select an image to upload:</h2> 
 <form action='upload.php' method='POST' enctype='multipart/form-data'>
-File: <input type='file' name='myfile'><br/><br/> <input type='submit' name='submit' value='Upload!'> 
+<p>File: <input type='file' name='myfile'></p>
+<p><input type='submit' name='submit' value='Upload!'></p>
 </form>";
 
 //include ('footer.php');
