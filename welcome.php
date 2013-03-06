@@ -23,6 +23,16 @@ include('lock.php');
 				 <div class="padding">
 					<?php include('view.php'); ?>
 					<h4><font color="black">Welcome back <?php echo $login_name; ?>!</font></h4>
+					<p><font color="black"><b>Employment: </b></font><?=$login_school?><p>
+					<p><font color="black"><b>Job Title: </b></font><?=$login_job?><p>
+					<p><font color="black"><b>Teaching Level: </b></font><?php 
+					 $skills = explode(',',$login_skill);
+					 echo "<ul>";
+					 foreach ($skills as $s){
+						echo "<li>$s</li>";
+					 }
+					 echo "</ul>";
+					 ?></p>
 				</div>
 				<div id="login-content">
 					<ul class="login-menu">

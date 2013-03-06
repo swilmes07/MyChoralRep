@@ -1,0 +1,28 @@
+html, body{
+	margin:0;
+	padding:0;
+}
+body{
+
+	font-family: arial, 'times new roman', 'sans-serif';
+	margin-left:10%;
+	margin-right:10%;
+	text-align: center;
+}
+
+h1{
+	margin-top:40px;
+	color: #e6000f;
+}
+p{
+	margin-left: 13%;
+	margin-right: 14%;
+	}
+.adjustLeft p{
+	text-align: left;
+}
+#footer{
+
+	margin-top: 50px;
+}
+

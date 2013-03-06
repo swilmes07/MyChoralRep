@@ -5,30 +5,28 @@ html, body {
 body{
 	font-family: Arial, Helvetica, Verdana, Sans-serif;
     font-size: 12px;
-    color: #666666;
-    background: #ffffffff;
+    color: #2a2625;
+    background: #706c69;
 }
-h1{
-	margin: 0;
+/*h1, h2, p{
+	margin-left: 20px;
+	margin-right: 20px;
     padding: 0;
-}
-#content h2 {
-	margin: 0;
-	padding: 0;
-	padding-bottom: 15px;
-}	 
-#content p {
-	margin: 0;
-	padding: 0;
-	padding-bottom: 15px;
-}
+}*/
+
 .hidden{
 	display: none;
 }
 #page-container {
 	width: 760px;
 	margin: auto;
+	margin-bottom: 40px;
+	background:white;
+	box-shadow:0px 0px 15px 5px #332f2e;
+	overflow:hidden;
+	float: center;
 }
+
 #main-nav {
 	height: 50px;
 	overflow: hidden;
@@ -52,11 +50,11 @@ h1{
 
 .main-menu li a {
 	display: block;
+	border.none:;
 	text-decoration: none;
 	margin: 0;
 	
 }
-
 .main-menu li a:hover {
 	background: black;
 	margin-top: -50px;
@@ -65,30 +63,110 @@ h1{
 	margin-bottom: 0px;
 	overflow: hidden;
 } 
-
+.login-menu{
+	list-style: none;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+#login-content{
+	overflow: hidden;
+	background: black;
+	margin-bottom: 5px;
+	}
+.login-menu{
+	list-style: none;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}	
+.login-menu li {
+	margin-right: 10px;
+	width: 200px;
+	height: 50px;
+	overflow:hidden;
+	
+}
+.login-menu li a{
+	display: block;
+	border.none:;
+	text-decoration: none;
+	margin: 0;
+}
+.login-menu li a:hover{
+	background: black;
+	margin-top: -50px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	overflow: hidden;
+}
 #header {
 	background: url(../images/sample.jpg);
 	height: 150px;
+	margin-bottom: 10px;
 }
 #sidebar-a {
 	margin-top: 8px;
+	margin-bottom: 50px;
 	float: right;
 	width: 200px;
 	line-height: 18px;
 }
-#sidebar-a .padding {
-    padding: 25px;
+#padding h4, #padding p, #padding li{
+	padding: 0px;
+	margin-left: 35px;
+	
 	
 }
+/*#padding{
+	margin-left: 50px;
+}*/
+#move{
+	margin-left: 45px;
+}
+
 #content {
 	margin-right: 200px;
+	padding-left:20px;
+	padding-bottom: 50%;
 	line-height: 18px;
 	color: black;
+	border-right-style:solid;
+	border-width: 5px;
+	border-color:#908f8d;
 }
-#content .padding {
+#content h2, #content p {
+	padding: 0;
+	padding-bottom: 15px;
+}	 
+#content.padding {
     padding: 0px;
 }
 #footer {
 	clear: both;
-	height: 66px;
+	margin-top: 15px;
+	padding-top: 5px;
+	padding-left:20px;
+	padding-bottom: 8px;
+	color: #908f8d;
+	background-image:url(../images/MCRFooter.jpg);
+	background-repeat: no-repeat;
+}
+#footer a{
+	color:#30fefe;
+}
+p label {
+	display: inline-block;
+	width: 120px;
+}
+p input{
+	width: 150px;
+}
+#checkbox input{
+	margin-left: 75px;
+	width:20px;
+}
+#fileUpload input{
+	width:200px;
 }

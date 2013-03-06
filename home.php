@@ -18,19 +18,22 @@
 	</head>
 	 
 	<body>
+	
 		<div id="page-container">
 			<div id="main-nav">
 				<ul class="main-menu">
-					<li id="about"><a href="index.php"><img src="images/NavAbout.jpg"/></a></li>
-					<li id="browse"><a href="#"><img src="images/NavBrowse2.jpg"/></a></li>
-					<li id="search"><a href="#"><img src="images/NavSearch.jpg"/></a></li>
-					<li id="register"><a href="registration.php"><img src="images/NavReg.jpg"/></a></li>
+					<li id="about"><a href="index.php"><img src="images/NavAbout1.jpg" border="0"/></a></li>
+					<li id="browse"><a href="#"><img src="images/NavBrowse1.jpg" border ="0"/></a></li>
+					<li id="search"><a href="#"><img src="images/NavSearch1.jpg" border="0"/></a></li>
+					<li id="register"><a href="registration.php"><img src="images/NavReg1.jpg" border="0"/></a></li>
 				</ul>
 			</div>
 			<div id="header">
 				
 			</div>
+			
 			<div id="sidebar-a">
+				
 				 <div class="padding">
 					please login or <a href="registration.php">register</a>
 					<?php
@@ -38,6 +41,8 @@
 					?>
 				</div>
 			</div>
+			
+			
 			<div id="content">
 				 <h2>About</h2>
 				<p><strong>MyChoralRep</strong> is a website that will bring choral directors from all different regions together to share program information, view trends, and 
@@ -50,18 +55,10 @@
 				Email:   <a href="mailto:swilmes@missouriwestern.edu">swilmes@misouriwestern.edu</a><br />
 				</p>
 				<p><a href="#">More contact information…</a></p>
-			</div
-			<div id="footer">
-					<div id="altnav">
-						<a href="#">About</a> -
-						<a href="#">Services</a> -
-						<a href="#">Portfolio</a> -
-						<a href="#">Contact Us</a> -
-						<a href="#">Terms of Trade</a>
-					</div>
-				Copyright © MyChoralRep
-	 
-				Powered by <a href="localhost/hirdesigns">HIR Designs</a> 
-		</div>
+			</div>
+			
+			<?php include('footer.php');?>
+		</div>	
+		
 	</body>
 	</html>
