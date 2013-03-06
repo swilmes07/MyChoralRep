@@ -8,20 +8,12 @@ body{
     color: #2a2625;
     background: #706c69;
 }
-h1, h2, p{
+/*h1, h2, p{
 	margin-left: 20px;
+	margin-right: 20px;
     padding: 0;
-}
-#content h2, p {
-	padding: 0;
-	padding-bottom: 15px;
-}	 
-#border{
-	background-image:url(../images/border2.jpg);
-	background-repeat: repeat-y;
-	overflow: hidden;
-	
-}
+}*/
+
 .hidden{
 	display: none;
 }
@@ -29,11 +21,10 @@ h1, h2, p{
 	width: 760px;
 	margin: auto;
 	margin-bottom: 40px;
-	background:#908f8d;
+	background:white;
 	box-shadow:0px 0px 15px 5px #332f2e;
 	overflow:hidden;
 	float: center;
-
 }
 
 #main-nav {
@@ -117,30 +108,44 @@ h1, h2, p{
 }
 #sidebar-a {
 	margin-top: 8px;
-	margin-bottom: 100px;
+	margin-bottom: 50px;
 	float: right;
 	width: 200px;
 	line-height: 18px;
 }
+#padding h4, #padding p, #padding li{
+	padding: 0px;
+	margin-left: 35px;
+	
+	
+}
+/*#padding{
+	margin-left: 50px;
+}*/
 #move{
-	margin-left: 20px;
+	margin-left: 45px;
 }
-#sidebar-a .padding {
-    padding: 25px;
-	
-}
+
 #content {
-	
 	margin-right: 200px;
+	padding-left:20px;
+	padding-bottom: 50%;
 	line-height: 18px;
 	color: black;
+	border-right-style:solid;
+	border-width: 5px;
+	border-color:#908f8d;
 }
-#content .padding {
+#content h2, #content p {
+	padding: 0;
+	padding-bottom: 15px;
+}	 
+#content.padding {
     padding: 0px;
 }
 #footer {
 	clear: both;
-	margin-top: 25%;
+	margin-top: 15px;
 	padding-top: 5px;
 	padding-left:20px;
 	padding-bottom: 8px;
@@ -150,4 +155,18 @@ h1, h2, p{
 }
 #footer a{
 	color:#30fefe;
+}
+p label {
+	display: inline-block;
+	width: 120px;
+}
+p input{
+	width: 150px;
+}
+#checkbox input{
+	margin-left: 75px;
+	width:20px;
+}
+#fileUpload input{
+	width:200px;
 }

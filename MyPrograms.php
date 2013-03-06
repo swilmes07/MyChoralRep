@@ -26,11 +26,11 @@ include('lock.php');
 				
 			</div>
 			<div id="sidebar-a">
-				 <div class="padding">
+				 <div id="padding">
 					<?php include('view.php'); ?>
 					<h4><font color="black">Welcome back <?php echo $login_name; ?>!</font></h4>
-					<p><font color="black"><b>Employment: </b></font><?=$login_school?><p>
-					<p><font color="black"><b>Job Title: </b></font><?=$login_job?><p>
+					<p><font color="black"><b>Employment: </b></font><?=$login_school?></p>
+					<p><font color="black"><b>Job Title: </b></font><?=$login_job?></p>
 					<p><font color="black"><b>Teaching Level: </b></font><?php 
 					 $skills = explode(',',$login_skill);
 					 echo "<ul>";
@@ -47,7 +47,7 @@ include('lock.php');
 						<li><a href="AddProgram.php"><img src="images/AddProgram.jpg" border="0"/></a></li>
 						<li id="My Programs"><a href="MyPrograms.php"><img src="images/MyPrograms.jpg" border="0"/></a></li>
 						<li id="Most Popular"><a href="MostPopular.php"><img src="images/MostPopular.jpg" border="0"/></a></li>
-						<li id="Log Out"><a href="logout.php"><img src="images/LogOut.jpg" border="0"/></a>
+						<li id="Log Out"><a href="logout.php"><img src="images/LogOut.jpg" border="0"/></a></li>
 					</ul>
 				</div>
 			</div>
